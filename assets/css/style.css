@@ -6,7 +6,7 @@
 }
 
 :root {
-    --main-blue: #00ABA9;
+    --main-blue: #042ff8;
     font-size: 10px;
 }
 
@@ -93,6 +93,124 @@ h1.hero-text {
     background-color: #fff;
 }
 
+.services-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#services {
+    height: 300vh;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.service {
+    margin-top: 20px;
+    max-width: 300px;
+    padding: 2rem;
+    box-shadow: 0 0 5px #ccc;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.service::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    background-color: var(--main-blue);
+    transition: 0.5s ease-in-out;
+}
+
+.service-icon {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.service:hover::after {
+    left: 0;
+}
+
+.service:hover {
+    color: #fff;
+}
+
+.service:hover .service-title {
+    color: #fff;
+}
+
+.service-title {
+    color: #131530;
+    font-size: 2.6rem;
+    font-family: 'Poppins';
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+    transition: 0.5s color ease-in-out;
+}
+
+.service-title::after {
+    position: absolute;
+    content: '';
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background-color: #efefef;
+    display: block;
+}
+
+
+
+.section-name {
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.section-name::after {
+    content: '';
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    height: 5px;
+    width: 80%;
+    background-color: var(--main-blue);
+    transform: translateX(-50%);
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+
+}
+
+.service-description {
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 2;
+    transition: 0.5s color ease-in-out;
+}
+
+
+
 @media (min-width: 768px) {
     .block-left {
         width: 50%;
@@ -105,9 +223,6 @@ h1.hero-text {
     }
 
 }
-
-
-
 
 
 
@@ -190,5 +305,11 @@ h1.hero-text {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
     }
 }
