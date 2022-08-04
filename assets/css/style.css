@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-blue: #00ABA9;
+    font-size: 10px;
+}
+
+.nav-circle {
+    width: 50px;
+    height: 50px;
+    background-color: var(--main-blue);
+    border-radius: 50%;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.nav-circle i {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.colored {
+    color: var(--main-blue);
+}
+
+#hero {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 0;
+    width: 100%;
+
+    position: relative;
+    z-index: 1;
+}
+
+.block-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    background-color: #efefef;
+    animation-name: slideInLeft;
+    animation-fill-mode: both;
+    animation-duration: 1.5s;
+    z-index: 2;
+}
+
+h1.hero-text {
+    position: absolute;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: #131530;
+    font-weight: 700;
+    letter-spacing: -1.25px;
+    font-family: serif;
+    line-height: 1em;
+    text-align: left;
+    top: -8rem;
+    left: 11%;
+    animation-name: slideInBottomDesktop;
+    animation-fill-mode: both;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+}
+
+.hero-desc {
+    position: absolute;
+    color: #131530;
+    bottom: 8rem;
+    left: 11%;
+    animation-name: slideInBottomDesktop;
+    animation-fill-mode: both;
+    animation-duration: 1.5s;
+    animation-delay: 2.2s;
+    font-size: 1.4rem;
+    max-width: 30rem;
+}
+
+.white-block {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+}
+
+@media (min-width: 768px) {
+    .block-left {
+        width: 50%;
+    }
+
+    #hero {
+        background-image: url('../images/workspace.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+}
+
+
+
+
+
+
+
+
+@media (min-width: 568px) {
+    .hero-desc {
+        bottom: 50px;
+    }
+}
+
+@media (min-width: 768px) {
+    h1.hero-text {
+        font-size: 6rem;
+        top: -12rem;
+    }
+
+    .hero-desc {
+        font-size: 1.8rem;
+        max-width: 45rem;
+        bottom: 5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .block-left {
+        animation-name: slideInLeftDesktop;
+    }
+
+    .white-block {
+        width: 55%;
+    }
+
+    .hero-desc {
+        bottom: 10rem;
+    }
+}
+
+@media (min-width: 2160px) {
+    h1.hero-text {
+        font-size: 8rem;
+        top: -16rem;
+    }
+
+    .hero-desc {
+        font-size: 2.2rem;
+        max-width: 50rem;
+        bottom: 19rem;
+    }
+}
+
+
+
+@keyframes slideInLeft {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes slideInLeftDesktop {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 55%;
+    }
+}
+
+@keyframes slideInBottomDesktop {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
