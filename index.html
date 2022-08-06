@@ -9,13 +9,24 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/aa4cfd2b76.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Oswald:wght@200;300;400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e2ac9a3bcc.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="nav-circle">
-        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-bars active"></i>
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="menu">
+        <ul class="menu-list">
+            <li><a href="#" data-text="Home">Home</a></li>
+            <li><a href="#" data-text="Usługi">Usługi</a></li>
+            <li><a href="#" data-text="O nas">O nas</a></li>
+            <li><a href="#" data-text="Kontakt">Kontakt</a></li>
+        </ul>
     </div>
     <section id="hero">
         <div class="white-block"></div>
@@ -28,68 +39,8 @@
                 których klienci mogą być naprawdę dumni.</p>
         </div>
     </section>
-    <section id="services">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#f2f2f2" fill-opacity="1"
-                d="M0,96L30,101.3C60,107,120,117,180,133.3C240,149,300,171,360,165.3C420,160,480,128,540,122.7C600,117,660,139,720,160C780,181,840,203,900,213.3C960,224,1020,224,1080,218.7C1140,213,1200,203,1260,176C1320,149,1380,107,1410,85.3L1440,64L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z">
-            </path>
-        </svg>
-        <div class="section-title-background"></div>
-        <h1 class="section-name">Usługi</h1>
-        <div class="services-wrapper">
-            <div class="service">
-                <div class="service-content">
-                    <div class="service-icon">
-                        <!-- <img src="assets/images/11.svg" alt=""> -->
-                    </div>
-                    <h2 class="service-title">Web Development</h2>
-                    <p class="service-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. At et in
-                        doloremque, id delectus mollitia culpa, vitae error soluta ex corporis magnam omnis, distinctio
-                        ea a
-                        nemo iusto? Deleniti, vel!</p>
-                </div>
 
-            </div>
-            <div class="service">
-                <div class="service-content">
-                    <div class="service-icon">
-                        <!-- <img src="assets/images/11.svg" alt=""> -->
-                    </div>
-                    <h2 class="service-title">Web Development</h2>
-                    <p class="service-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. At et in
-                        doloremque, id delectus mollitia culpa, vitae error soluta ex corporis magnam omnis, distinctio
-                        ea a
-                        nemo iusto? Deleniti, vel!</p>
-                </div>
-
-            </div>
-            <div class="service">
-                <div class="service-content">
-                    <div class="service-icon">
-                        <!-- <img src="assets/images/11.svg" alt=""> -->
-                    </div>
-                    <h2 class="service-title">Web Development</h2>
-                    <p class="service-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. At et in
-                        doloremque, id delectus mollitia culpa, vitae error soluta ex corporis magnam omnis, distinctio
-                        ea a
-                        nemo iusto? Deleniti, vel!</p>
-                </div>
-
-            </div>
-            <div class="service">
-                <div class="service-content">
-                    <div class="service-icon">
-                        <!-- <img src="assets/images/11.svg" alt=""> -->
-                    </div>
-                    <h2 class="service-title">Web Development</h2>
-                    <p class="service-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. At et in
-                        doloremque, id delectus mollitia culpa, vitae error soluta ex corporis magnam omnis, distinctio
-                        ea a
-                        nemo iusto? Deleniti, vel!</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
